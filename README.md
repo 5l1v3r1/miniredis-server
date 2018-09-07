@@ -28,10 +28,10 @@ Send redis commands to http server ```http://localhost:3000/api```, run:
 curl http://localhost:3000/api -d 'command=COMMAND-HERE'
 ```
 
-Successful commands begin with ```+OK``` with optional message
+Successful commands response begin with ```+OK``` with optional message
 ```+OK message(optional)```
 
-Failed commands begin with ```+ERR``` with error message
+Failed commands response begin with ```+ERR``` with error message
 ```+ERR message```
 
 see below for commands supported
