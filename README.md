@@ -38,71 +38,71 @@ see below for commands supported
 
 ## Commands Supported:
   
->**GET** - Usage: ``` curl http://localhost:3000/api -d 'GET mykey' ``` 
+>**GET** - Usage: ``` curl http://localhost:3000/api -d 'command=GET mykey' ``` 
               --> ```+OK myval```
               --> return the string value identified by key
 
->**SET** - Usage: ``` curl http://localhost:3000/api -d 'SET mykey myval' ```
+>**SET** - Usage: ``` curl http://localhost:3000/api -d 'command=SET mykey myval' ```
               --> ```+OK```
               --> Instantiate or overwrite a String identified by key with value value
 
->**DELETE** - Usage: ``` curl http://localhost:3000/api -d 'DELETE mykey' ```
+>**DELETE** - Usage: ``` curl http://localhost:3000/api -d 'command=DELETE mykey' ```
               --> ``` +OK ```
               --> Delete the String identified by key
        
->**LISTGET** - Usage: ``` curl http://localhost:3000/api -d 'LISTGET mykey' ```
+>**LISTGET** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTGET mykey' ```
               --> ``` +OK ["myval"] ```
               --> Return the List value identified by key
 
->**LISTSET** - Usage: ``` curl http://localhost:3000/api -d 'LISTSET mykey myval' ```
+>**LISTSET** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTSET mykey myval' ```
               --> ``` +OK ```
               --> Instantiate or overwrite a List identified by key with value value
        
->**LISTDELETE** - Usage: ``` curl http://localhost:3000/api -d 'LISTDELETE mykey' ```
+>**LISTDELETE** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTDELETE mykey' ```
               --> ``` +OK ```
               --> Delete the List identified by key
 
->**LISTAPPEND** - Usage: ``` curl http://localhost:3000/api -d 'LISTAPPEND mykey myval2' ```
+>**LISTAPPEND** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTAPPEND mykey myval2' ```
               --> ``` +OK ```
               --> Append a String value to the end of the List identified by key
 
->**LISTPOP** - Usage: ``` curl http://localhost:3000/api -d 'LISTPOP mykey' ```
+>**LISTPOP** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTPOP mykey' ```
               --> ``` +OK ```
               --> Remove the last element in the List identified by key, and return that element.
 
->**MAPGET** - Usage: ``` curl http://localhost:3000/api -d 'MAPGET mykey' ```
+>**MAPGET** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPGET mykey' ```
               --> ``` +OK myval ```
               --> Return the Map value identified by key
 
->**MAPSET** - Usage: ``` curl http://localhost:3000/api -d 'MAPSET mykey myval' ```
+>**MAPSET** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPSET mykey myval' ```
               --> ``` +OK ```
               --> Instantiate or overwrite a Map identified by key with value value
 
->**MAPDELETE** - Usage: ``` curl http://localhost:3000/api -d 'MAPDELETE mykey' ```
+>**MAPDELETE** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPDELETE mykey' ```
               --> ``` +OK ```
               --> Delete the Map identified by key
 
->**MAPMAPGET** - Usage: ``` curl http://localhost:3000/api -d 'MAPMAPGET mykey mapkey' ```
+>**MAPMAPGET** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPMAPGET mykey mapkey' ```
               --> ``` +OK mapvalue ```
               --> Return the String identified by mapkey from within the Map identified by key
 
->**MAPMAPSET** - Usage: ``` curl http://localhost:3000/api -d 'MAPMAPSET mykey mapkey mapvalue' ```
+>**MAPMAPSET** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPMAPSET mykey mapkey mapvalue' ```
               --> ``` +OK ```
               --> Add the mapping mapkey -> mapvalue to the Map identified by key
 
->**MAPMAPDELETE** - Usage: ``` curl http://localhost:3000/api -d 'MAPMAPDELETE mykey mapkey' ```
+>**MAPMAPDELETE** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPMAPDELETE mykey mapkey' ```
               --> ``` +OK ```
               --> Delete the value identified by mapkey from the Map identified by key
 
->**SEARCHKEYS (string keys)** - Usage: ``` curl http://localhost:3000/api -d 'SEARCHKEYS string key' ```
+>**SEARCHKEYS (string keys)** - Usage: ``` curl http://localhost:3000/api -d 'command=SEARCHKEYS string key' ```
               --> ``` +OK ["mykey"] ```
               --> Search string keys identified by query
 
->**SEARCHKEYS (list keys)** - Usage: ``` curl http://localhost:3000/api -d 'SEARCHKEYS list key' ```
+>**SEARCHKEYS (list keys)** - Usage: ``` curl http://localhost:3000/api -d 'command=SEARCHKEYS list key' ```
               --> ``` +OK ["mykey"] ```
               --> Search list keys identified by query
 
->**SEARCHKEYS (map keys)** - Usage: ``` curl http://localhost:3000/api -d 'SEARCHKEYS map key' ```
+>**SEARCHKEYS (map keys)** - Usage: ``` curl http://localhost:3000/api -d 'command=SEARCHKEYS map key' ```
               --> ``` +OK ["mykey"] ```
               --> Search map keys identified by query 
 
