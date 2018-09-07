@@ -1,6 +1,6 @@
 (defproject miniredis-server "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "A simple redis clone implemented in Clojure"
+  :url "https://bitbucket.org/finixbit/miniredis-server"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [compojure "1.5.2"]
                  [hiccup "1.0.5"]

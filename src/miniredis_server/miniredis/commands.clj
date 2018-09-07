@@ -221,7 +221,7 @@
 
 
 (defn searchkeys-command
-  "Delete the String identified by key"
+  "Search keys identified by query"
   [key-category key-query]
   {:pre  [(string? key-category), (string? key-query)] 
    :post [(string? %)]}
