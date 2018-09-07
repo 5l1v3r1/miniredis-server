@@ -29,9 +29,11 @@ curl http://localhost:3000/api -d 'command=COMMAND-HERE'
 ```
 
 Successful commands response begin with ```+OK``` with optional message
+
 ```+OK message(optional)```
 
 Failed commands response begin with ```+ERR``` with error message
+
 ```+ERR message```
 
 see below for commands supported
@@ -39,35 +41,51 @@ see below for commands supported
 ## Commands Supported:
   
 >**GET** - Usage: ``` curl http://localhost:3000/api -d 'command=GET mykey' ``` 
+
               --> ```+OK myval```
+
               --> return the string value identified by key
 
 >**SET** - Usage: ``` curl http://localhost:3000/api -d 'command=SET mykey myval' ```
+
               --> ```+OK```
+
               --> Instantiate or overwrite a String identified by key with value value
 
 >**DELETE** - Usage: ``` curl http://localhost:3000/api -d 'command=DELETE mykey' ```
+
               --> ``` +OK ```
+
               --> Delete the String identified by key
        
 >**LISTGET** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTGET mykey' ```
+
               --> ``` +OK ["myval"] ```
+
               --> Return the List value identified by key
 
 >**LISTSET** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTSET mykey myval' ```
+
               --> ``` +OK ```
+
               --> Instantiate or overwrite a List identified by key with value value
        
 >**LISTDELETE** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTDELETE mykey' ```
+
               --> ``` +OK ```
+
               --> Delete the List identified by key
 
 >**LISTAPPEND** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTAPPEND mykey myval2' ```
+
               --> ``` +OK ```
+
               --> Append a String value to the end of the List identified by key
 
 >**LISTPOP** - Usage: ``` curl http://localhost:3000/api -d 'command=LISTPOP mykey' ```
+
               --> ``` +OK ```
+
               --> Remove the last element in the List identified by key, and return that element.
 
 >**MAPGET** - Usage: ``` curl http://localhost:3000/api -d 'command=MAPGET mykey' ```
